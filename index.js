@@ -79,33 +79,54 @@ console.log(CemberinAlani(15,pi))
 	var ucetambolunenler, enkucuk, enbuyuk, ucebolunenlerintoplami, besyuzdenkucuksayilar, siralisayilar, tekraredensayilar;
 	
 	//3a çözümü
+	enkucuk = 12.5
+	enbuyuk = 45
 
-	for(let i = 0; i<sayilar.length; i++)
+	for(let i = 0; i<sayilar.length; i++){
+		if(sayilar[i]<enkucuk) enkucuk = sayilar[i]
+		if(sayilar[i]>enbuyuk) enbuyuk = sayilar[i]
+	}
 		
-	
-	
+	console.log(enbuyuk)
+	console.log(enkucuk)
 	
 	// 3b çözümü:
 
-	/* kodlar buraya */
-		
-		
-		
+	ucetambolunenler = []
+
+	sayilar.forEach(element => {
+		if(element % 3 == 0) return ucetambolunenler.push(element)
+	})
+
+	console.log(ucetambolunenler)
+	
 	//3c çözümü:
 	
-	/* kodlar buraya */
+	ucebolunenlerintoplami  = ucetambolunenler.reduce((total,ucetambolunenlerindexi) =>{
+		return total + ucetambolunenlerindexi
+	},0)
 
+	
+
+	console.log(ucebolunenlerintoplami)
 	
 	
 	//3d çözümü
 	
-	/* kodlar buraya */
+	besyuzdenkucuksayilar = []
+
+	besyuzdenkucuksayilar = sayilar.filter((dusukparametresi)=>dusukparametresi < 500)
+
+	console.log(besyuzdenkucuksayilar)
+
 
 
 
 	//3e çözümü
 
-	/* kodlar buraya */
+	siralisayilar = []
+
+	siralisayilar = besyuzdenkucuksayilar.sort((a,b)=>a-b)
 	
 	
 	//3f çözümü
